@@ -1,15 +1,15 @@
-import { Controller, Get, Param, HttpException, HttpStatus } from '@nestjs/common';
+import { Controller, Get, HttpException, HttpStatus, Query } from '@nestjs/common';
 import { AbstractMailService } from './mail.abstract';
 
-@Controller('mail-parsing')
+@Controller('mail')
 export class MailController {
     constructor(private readonly mailService: AbstractMailService) { }
 
-    @Get(':urlOrPath')
-    async getEmail(@Param('urlOrPath') urlOrPath: string): Promise<any> {
+    @Get('parsing')
+    async getEmail(@Query('urlOrPath') urlOrPath: string): Promise<any> {
         try {
-            const parsedEmail = await this.mailService.parseEmail(urlOrPath);
-            return parsedEmail;
+            const jsonContent = await this.mailService.parseEmail(urlOrPath);
+            return jsonContent;
         } catch (error) {
             // Handle specific errors or generalize as needed
             throw new HttpException(`Failed to parse email: ${error.message}`, HttpStatus.INTERNAL_SERVER_ERROR);

@@ -1,18 +1,25 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { BadRequestException, HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import * as fs from 'fs-extra';
 import axios from 'axios';
 import { simpleParser } from 'mailparser';
 
 import { AbstractMailService } from './mail.abstract';
+import * as path from 'path';
 
 @Injectable()
 export class MailService implements AbstractMailService {
     async parseEmail(urlOrPath: string): Promise<any> {
+        const fileExtension = path.extname(urlOrPath).toLowerCase();
+
+        if (!['.eml', '.msg', '.mbox'].includes(fileExtension)) {
+            throw new BadRequestException('Invalid file format. Only .eml, .msg, and .mbox files are allowed.');
+        }
+
         try {
             const rawEmail = this.isLocalUrl(urlOrPath) ? await this.readLocalFile(urlOrPath) : await this.readRemoteFile(urlOrPath);
             const { attachments, text, html } = await simpleParser(rawEmail);
 
-            const jsonContent = this.extractJsonFromAttachments(attachments);
+            const jsonContent = this.extractJsonFromAttachments(attachments) || this.extractJsonFromEmailBody(text);
 
             return jsonContent;
         } catch (error) {
@@ -28,6 +35,18 @@ export class MailService implements AbstractMailService {
                 }
             }
         }
+        return null;
+    }
+
+    private async extractJsonFromEmailBody(emailBody: string): Promise<any> {
+        const regex = /\bhttps?:\/\/\S+?\.json\b/g;
+        const match = emailBody.match(regex);
+        if (match && match[0]) {
+            const jsonUrl = match[0];
+            const response = await axios.get(jsonUrl);
+            return response.data;
+        }
+
         return null;
     }
 

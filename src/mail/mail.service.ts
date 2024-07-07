@@ -1,11 +1,12 @@
-import { BadRequestException, HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { simpleParser } from 'mailparser';
 import * as cheerio from 'cheerio';
 import axios from 'axios';
 
 import { readLocalFile, readRemoteFile, validateEmailFileFormat } from '../common/helpers/fileHelpers';
-import { isLocalUrl } from '../common/helpers';
+import { NoJsonContentException } from '@common/exception';
 import { AbstractMailService } from './mail.abstract';
+import { isLocalUrl } from '@common/helpers';
 
 @Injectable()
 export class MailService implements AbstractMailService {
@@ -20,7 +21,7 @@ export class MailService implements AbstractMailService {
             const jsonContent = this.extractJsonFromAttachments(attachments) || await this.extractJsonFromEmailBody(text) || await this.extractJsonFromRedirectedPage(text);
 
             if (!jsonContent) {
-                throw new BadRequestException('No JSON content found in email.');
+                throw new NoJsonContentException();
             }
 
             return jsonContent;

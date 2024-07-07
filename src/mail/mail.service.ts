@@ -1,30 +1,36 @@
 import { BadRequestException, HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import * as fs from 'fs-extra';
-import axios from 'axios';
 import { simpleParser } from 'mailparser';
-import * as path from 'path';
 import * as cheerio from 'cheerio';
+import axios from 'axios';
 
+import { readLocalFile, readRemoteFile, validateEmailFileFormat } from '../common/helpers/fileHelpers';
+import { isLocalUrl } from '../common/helpers';
 import { AbstractMailService } from './mail.abstract';
 
 @Injectable()
 export class MailService implements AbstractMailService {
     async parseEmail(urlOrPath: string): Promise<any> {
-        const fileExtension = path.extname(urlOrPath).toLowerCase();
 
-        if (!['.eml', '.msg', '.mbox'].includes(fileExtension)) {
-            throw new BadRequestException('Invalid file format. Only .eml, .msg, and .mbox files are allowed.');
-        }
+        validateEmailFileFormat(urlOrPath);
 
         try {
-            const rawEmail = this.isLocalUrl(urlOrPath) ? await this.readLocalFile(urlOrPath) : await this.readRemoteFile(urlOrPath);
+            const rawEmail = isLocalUrl(urlOrPath) ? await readLocalFile(urlOrPath) : await readRemoteFile(urlOrPath);
             const { attachments, text, html } = await simpleParser(rawEmail);
 
             const jsonContent = this.extractJsonFromAttachments(attachments) || await this.extractJsonFromEmailBody(text) || await this.extractJsonFromRedirectedPage(text);
 
+            if (!jsonContent) {
+                throw new BadRequestException('No JSON content found in email.');
+            }
+
             return jsonContent;
         } catch (error) {
-            throw new HttpException(`Error parsing email: ${error.message}`, HttpStatus.INTERNAL_SERVER_ERROR);
+            if (error.response && error.response.status) {
+                throw new HttpException(`External request failed: ${error.message}`, error.response.status);
+            } else {
+                // Otros errores
+                throw new HttpException(`Error parsing email: ${error.message}`, HttpStatus.INTERNAL_SERVER_ERROR);
+            }
         }
     }
 
@@ -76,26 +82,5 @@ export class MailService implements AbstractMailService {
             console.error('Error extracting JSON from redirected page:', error.message);
             return null;
         }
-    }
-
-    async readLocalFile(urlOrPath: string): Promise<string> {
-        try {
-            return await fs.readFile(urlOrPath, 'utf8');
-        } catch (error) {
-            throw new Error(`Error reading local file: ${error.message}`);
-        }
-    }
-
-    async readRemoteFile(urlOrPath: string): Promise<string> {
-        try {
-            const response = await axios.get(urlOrPath);
-            return response.data;
-        } catch (error) {
-            throw new Error(`Error reading remote file: ${error.message}`);
-        }
-    }
-
-    isLocalUrl(urlOrPath: string): boolean {
-        return !urlOrPath.includes('://') || urlOrPath.startsWith('file://') || urlOrPath.startsWith('http://localhost') || urlOrPath.startsWith('http://127.0.0.1');
     }
 }

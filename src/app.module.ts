@@ -4,4 +4,4 @@ import { MailModule } from './mail/mail.module';
 @Module({
   imports: [MailModule],
 })
-export class AppModule {}
+export class AppModule { }

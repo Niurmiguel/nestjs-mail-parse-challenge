@@ -4,9 +4,9 @@ import * as cheerio from 'cheerio';
 import axios from 'axios';
 
 import { readLocalFile, readRemoteFile, validateEmailFileFormat } from '../common/helpers/fileHelpers';
-import { NoJsonContentException } from '@common/exception';
+import { NoJsonContentException } from '../common/exception';
 import { AbstractMailService } from './mail.abstract';
-import { isLocalUrl } from '@common/helpers';
+import { isLocalUrl } from '../common/helpers';
 
 @Injectable()
 export class MailService implements AbstractMailService {
@@ -29,7 +29,6 @@ export class MailService implements AbstractMailService {
             if (error.response && error.response.status) {
                 throw new HttpException(`External request failed: ${error.message}`, error.response.status);
             } else {
-                // Otros errores
                 throw new HttpException(`Error parsing email: ${error.message}`, HttpStatus.INTERNAL_SERVER_ERROR);
             }
         }

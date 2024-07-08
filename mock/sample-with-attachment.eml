@@ -1,0 +1,120 @@
+MIME-Version: 1.0
+Date: Sat, 6 Jul 2024 12:11:45 -0400
+Message-ID: <CAL96-O8B6GRUpm9LUga2m2Y-okd2VQN2RBLhF5xw1OSUHFsW1g@mail.gmail.com>
+Subject: Sample with attachment
+From: Niurmiguel Gonzalez <niurmiguelg@gmail.com>
+To: test-fzgrfrwsb@srv1.mail-tester.com
+Content-Type: multipart/mixed; boundary="000000000000c553fa061c966f84"
+
+--000000000000c553fa061c966f84
+Content-Type: multipart/alternative; boundary="000000000000c553f8061c966f82"
+
+--000000000000c553f8061c966f82
+Content-Type: text/plain; charset="UTF-8"
+
+Prueba con json adjunto en el mensaje.
+Niurmiguel Gonzalez
+Software Engineer
+  829-228-8805
+  niurmiguelg@gmail.com
+  Santo Domingo, RD <https://maps.google.com/?q=Santo%20Domingo,%20RD>
+<https://github.com/Niurmiguel> <https://linkedin.com/in/niur>
+
+--000000000000c553f8061c966f82
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Prueba con json adjunto en el mensaje.<br clear=3D"all"><d=
+iv><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signa=
+ture"><div dir=3D"ltr"><div dir=3D"ltr"><table style=3D"color:rgb(25,28,43)=
+;font-family:Mulish,sans-serif;font-size:16px;direction:ltr;border-collapse=
+:collapse"><tbody><tr><td style=3D"height:12px;line-height:0px"></td></tr><=
+tr><td><table cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family:Aria=
+l;line-height:1.15;padding-bottom:10px;color:rgb(0,0,0)"><tbody><tr><td sty=
+le=3D"vertical-align:top;padding-right:16px"><table cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"width:65px"><tbody><tr><td align=3D"center"><img src=
+=3D"https://d36urhup7zbd7q.cloudfront.net/anonymous_user/45a80707-f4b8-441c=
+-a785-b27a8058660f.webp#logo" height=3D"65" width=3D"65" style=3D"width:65p=
+x;vertical-align:initial;border-radius:50%;display:block;height:65px"></td>=
+</tr></tbody></table></td><td valign=3D"top" style=3D"vertical-align:top;li=
+ne-height:0px"><table cellpadding=3D"0" cellspacing=3D"0" style=3D"line-hei=
+ght:1.2"><tbody><tr><td valign=3D"top" style=3D"vertical-align:top;padding-=
+right:45px;line-height:1.2"><span style=3D"font-family:Arial;color:rgb(17,4=
+1,70);text-transform:initial;font-weight:bold">Niurmiguel Gonzalez</span><b=
+r><span style=3D"font-size:12px;letter-spacing:0px;font-family:Arial;text-t=
+ransform:initial;color:rgb(51,51,51)">Software Engineer</span><br></td><td =
+valign=3D"top" style=3D"vertical-align:top;line-height:0px"><table cellpadd=
+ing=3D"0" cellspacing=3D"0" style=3D"font-size:12px;line-height:1.2"><tbody=
+><tr><td style=3D"line-height:0"><table cellpadding=3D"0" cellspacing=3D"0"=
+><tbody><tr><td style=3D"line-height:0px;padding-bottom:6px"><table cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"line-height:14px;font-family:Arial"><=
+tbody><tr><td style=3D"padding:0.01px 2px;font-family:Arial;font-weight:bol=
+d;color:rgb(17,41,70)"><img src=3D"https://cdn.gifo.wisestamp.com/s/rich-fi=
+eld-mobile-1/112946/26/trans.png" width=3D"13" style=3D"vertical-align:-2px=
+;line-height:1.2;width:13px"></td><td width=3D"5" style=3D"width:5px;font-s=
+ize:1pt;line-height:0">=C2=A0</td><td style=3D"font-family:Arial"><a href=
+=3D"tel:829-228-8805" target=3D"_blank"><span style=3D"line-height:1.2;colo=
+r:rgb(33,33,33);white-space:nowrap">829-228-8805</span></a></td></tr></tbod=
+y></table></td></tr><tr><td style=3D"line-height:0px;padding-bottom:6px"><t=
+able cellpadding=3D"0" cellspacing=3D"0" style=3D"line-height:14px;font-fam=
+ily:Arial"><tbody><tr><td style=3D"padding:0.01px 2px;font-family:Arial;fon=
+t-weight:bold;color:rgb(17,41,70)"><img src=3D"https://cdn.gifo.wisestamp.c=
+om/s/rich-field-email-1/112946/26/trans.png" width=3D"13" style=3D"vertical=
+-align:-2px;line-height:1.2;width:13px"></td><td width=3D"5" style=3D"width=
+:5px;font-size:1pt;line-height:0">=C2=A0</td><td style=3D"font-family:Arial=
+"><a href=3D"mailto:niurmiguelg@gmail.com" target=3D"_blank"><span style=3D=
+"line-height:1.2;color:rgb(33,33,33);white-space:nowrap">niurmiguelg@gmail.=
+com</span></a></td></tr></tbody></table></td></tr><tr><td style=3D"line-hei=
+ght:0px;padding-bottom:6px"><table cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"line-height:14px;font-family:Arial"><tbody><tr><td style=3D"padding:0.=
+01px 2px;font-family:Arial;font-weight:bold;color:rgb(17,41,70)"><img src=
+=3D"https://cdn.gifo.wisestamp.com/s/rich-field-address-2/112946/26/trans.p=
+ng" width=3D"13" style=3D"vertical-align:-2px;line-height:1.2;width:13px"><=
+/td><td width=3D"5" style=3D"width:5px;font-size:1pt;line-height:0">=C2=A0<=
+/td><td style=3D"font-family:Arial"><a href=3D"https://maps.google.com/?q=
+=3DSanto%20Domingo,%20RD" target=3D"_blank"><span style=3D"line-height:1.2;=
+color:rgb(33,33,33);white-space:nowrap">Santo Domingo, RD</span></a></td></=
+tr></tbody></table></td></tr></tbody></table></td></tr><tr><td style=3D"pad=
+ding-top:8px;line-height:0px"><table cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:150.906px;line-height:1.2"><tbody><tr><td><table border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0"><tbody><tr><td align=3D"left" style=3D"=
+padding-right:6px;text-align:center;padding-top:0px"><a href=3D"https://git=
+hub.com/Niurmiguel" target=3D"_blank"><img width=3D"24" height=3D"24" src=
+=3D"https://cdn.gifo.wisestamp.com/s/github/112946/48/circle/background.png=
+" border=3D"0" style=3D"float:left;border:none"></a></td><td align=3D"left"=
+ style=3D"padding-right:6px;text-align:center;padding-top:0px"><a href=3D"h=
+ttps://linkedin.com/in/niur" target=3D"_blank"><img width=3D"24" height=3D"=
+24" src=3D"https://cdn.gifo.wisestamp.com/s/linkedin/112946/48/circle/backg=
+round.png" border=3D"0" style=3D"float:left;border:none"></a></td></tr></tb=
+ody></table><div style=3D"height:1px!important"></div></td></tr></tbody></t=
+able></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody>=
+</table><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"ma=
+x-width:600px;width:435.156px"><tbody><tr><td style=3D"line-height:0"></td>=
+</tr></tbody></table></td></tr></tbody></table></div></div></div></div></di=
+v>
+
+--000000000000c553f8061c966f82--
+--000000000000c553fa061c966f84
+Content-Type: application/json; name="sample.json"
+Content-Disposition: attachment; filename="sample.json"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_lyabnou20
+Content-ID: <f_lyabnou20>
+
+ewogICAgIm1pbl9wb3NpdGlvbiI6IDYsCiAgICAiaGFzX21vcmVfaXRlbXMiOiBmYWxzZSwKICAg
+ICJpdGVtc19odG1sIjogIkJpa2UiLAogICAgIm5ld19sYXRlbnRfY291bnQiOiA5LAogICAgImRh
+dGEiOiB7CiAgICAgICAgImxlbmd0aCI6IDI1LAogICAgICAgICJ0ZXh0IjogIkV4Y2VwdGV1ciBz
+aW50IG9jY2FlY2F0IGN1cGlkYXRhdCBub24gcHJvaWRlbnQsIHN1bnQgaW4gY3VscGEgcXVpIG9m
+ZmljaWEgZGVzZXJ1bnQgbW9sbGl0IGFuaW0gaWQgZXN0IGxhYm9ydW0uIgogICAgfSwKICAgICJu
+dW1lcmljYWxBcnJheSI6IFsKICAgICAgICAyNiwKICAgICAgICAzMSwKICAgICAgICAyNSwKICAg
+ICAgICAzMywKICAgICAgICAzMwogICAgXSwKICAgICJTdHJpbmdBcnJheSI6IFsKICAgICAgICAi
+T3h5Z2VuIiwKICAgICAgICAiT3h5Z2VuIiwKICAgICAgICAiQ2FyYm9uIiwKICAgICAgICAiT3h5
+Z2VuIgogICAgXSwKICAgICJtdWx0aXBsZVR5cGVzQXJyYXkiOiAiSGVsbG8iLAogICAgIm9iakFy
+cmF5IjogWwogICAgICAgIHsKICAgICAgICAgICAgImNsYXNzIjogIm1pZGRsZSIsCiAgICAgICAg
+ICAgICJhZ2UiOiA4CiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAgICJjbGFzcyI6ICJs
+b3dlciIsCiAgICAgICAgICAgICJhZ2UiOiA5CiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAg
+ICAgICJjbGFzcyI6ICJtaWRkbGUiLAogICAgICAgICAgICAiYWdlIjogNAogICAgICAgIH0sCiAg
+ICAgICAgewogICAgICAgICAgICAiY2xhc3MiOiAibG93ZXIiLAogICAgICAgICAgICAiYWdlIjog
+NwogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAiY2xhc3MiOiAidXBwZXIiLAogICAg
+ICAgICAgICAiYWdlIjogNwogICAgICAgIH0KICAgIF0KfQ==
+--000000000000c553fa061c966f84--
